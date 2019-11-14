@@ -8,6 +8,8 @@ class MultiForm{
   protected static $_db_name;
   protected static $_table_name;
 	protected static $_db_fields = [];
+  protected static $_prop_type = [];
+  protected static $_prop_size = [];
 
   protected $_author;
   protected $_updated;
