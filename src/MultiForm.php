@@ -16,7 +16,10 @@ class MultiForm{
   protected $_created;
   public $errors = [];
 
-  function __construct(string $db_name, string $table_name, string $primary_key=''){
+  function __construct(string $db_name, string $table_name, string $primary_key='', $conn = false){
+    if ($conn && $conn instanceof MySQLDatabase) {
+      static::$_conn = $conn;
+    }
     $this->_init($db_name,$table_name);
     if( !empty($primary_key) ){
       self::$_primary_key = $primary_key;
