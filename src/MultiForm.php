@@ -1,5 +1,7 @@
 <?php
 namespace TymFrontiers;
+use \AllowDynamicProperties;
+#[AllowDynamicProperties]
 class MultiForm{
   use Helper\MySQLDatabaseObject,
       Helper\Pagination;
