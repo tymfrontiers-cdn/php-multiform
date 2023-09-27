@@ -63,6 +63,9 @@ class MultiForm{
     $this->$key_name = null;
     return $key_name;
   }
+  public function setAuthor (string $author) {
+    $this->_author = $author;
+  }
   public function delete(){ return $this->_delete(); }
   public function create(){ return $this->_create(); }
   public function update(){ return $this->_update(); }
